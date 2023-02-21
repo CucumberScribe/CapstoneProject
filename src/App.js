@@ -5,13 +5,32 @@ import { GlobalStyles } from './global';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Burger, Menu } from './components';
+
+
 import  Logo  from './paths-program-llc-logo.jpg';
+
+
 function App() {
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
 
   useOnClickOutside(node, () => setOpen(false));
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (username === "runtian" && password === "123456") {
+      alert("login successful");
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  }
+
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -21,11 +40,39 @@ function App() {
               <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
-            <div>
-            <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
-            </div>
+          <div>
+          <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+          </div>
       </>
+      
+      <form onSubmit={handleSubmit}>
+      <div style={{alignitems:'center', width: 200,  height: 100, color: 'black'}}>
+      <h1 htmlFor="username" >Username:</h1>
+      </div>
+      <input
+        type="text"
+        id="username"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+        style={{ width: '350px', height: '100px',fontSize: '50px'}}
+      />
+      <br />
+      <div style={{alignitems:'center', width: 200,  height: 100, color: 'black'}}>
+      <h2 htmlFor="password">Password:</h2>
+      </div>
+      <input
+        type="password"
+        id="password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        style={{ width: '350px', height: '100px',fontSize: '50px'}}
+      />
+      <br />
+      <button type="submit" style={{fontSize: '16px', padding: '10px 20px',backgroundColor: 'orange' }}>Log in</button>
+    </form>
     </ThemeProvider>
+
+    
   );
 }
 
