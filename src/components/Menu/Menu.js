@@ -11,7 +11,7 @@ const Menu = ({ open}) => {
       <h1 style={{ color: 'blue' }}>CONNECT</h1>
       <h2 style={{ color: 'blue' }}>QUICK LINK</h2>
       <div >
-      <a style={{ color: 'blue', textDecoration: 'underline' }} href={myLink}>{myText}</a>
+      <a style={{ color: 'blue', textDecoration: 'underline'}} href={myLink}>{myText}</a>
       </div>
       <h4 style={{ color: 'blue' }}>CONTACT</h4>
 
