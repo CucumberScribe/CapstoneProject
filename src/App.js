@@ -5,7 +5,7 @@ import { GlobalStyles } from './global';
 import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Burger, Menu } from './components';
-
+// This is a comment
 
 import  Logo  from './paths-program-llc-logo.jpg';
 
