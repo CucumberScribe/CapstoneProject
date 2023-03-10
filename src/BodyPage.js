@@ -10,7 +10,7 @@ import {useNavigate} from 'react-router-dom';
 
 import  Logo  from './paths-program-llc-logo.jpg';
 
-import { useParams,useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function BodyPage() {
     const [open, setOpen] = useState(false);
