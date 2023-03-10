@@ -10,7 +10,7 @@ import {useNavigate} from 'react-router-dom';
 
 import  Logo  from './paths-program-llc-logo.jpg';
 
-import { useLocation } from 'react-router-dom';
+import { useParams,useLocation } from 'react-router-dom';
 
 function BodyPage() {
     const [open, setOpen] = useState(false);
@@ -20,7 +20,8 @@ function BodyPage() {
     useOnClickOutside(node, () => setOpen(false));
 
     const location = useLocation();
-    const picture = location.state?.picture;
+    const searchParams = new URLSearchParams(location.search);
+    const answer1 = searchParams.get('q1');
 
     const navigate = useNavigate();
 	  const goBack = () => {
@@ -30,8 +31,10 @@ function BodyPage() {
         navigate('/wheels');
       }
     
-      return (
-        <ThemeProvider theme={theme}>
+    switch(answer1){
+        case 'a':
+          return(
+            <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
             <div ref={node}>
@@ -41,16 +44,100 @@ function BodyPage() {
             <div>
             <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
             </div>
-            <div>
-            <img src={picture} alt="Selected Picture" />
-            </div>
+
+            <button
+              style={{ backgroundColor: '#6565FF', fontSize: '24px', padding: '50px', margin: '8px' }}
+            >
+              Pleasant 
+              Calm
+            </button>
             <div style={{ marginTop: '20rem', textAlign: 'center' }}>
                 <button onClick={goBack}>Back</button>	
                 <button onClick={goNext}>Next</button>
             </div>
         </>
         </ThemeProvider>
-      );
+          ); 
+        
+        
+        case 'b':
+          return(
+            <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+            <div ref={node}>
+                <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+                <Menu open={open} setOpen={setOpen} id={menuId} />
+            </div>
+            <div>
+            <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+            </div>
+
+            <button
+              style={{ backgroundColor:'#FCB165', fontSize: '24px', padding: '50px', margin: '8px'  }}>
+              Pleasant 
+              Agitated
+            </button>
+            <div style={{ marginTop: '20rem', textAlign: 'center' }}>
+                <button onClick={goBack}>Back</button>	
+                <button onClick={goNext}>Next</button>
+            </div>
+        </>
+        </ThemeProvider>
+          );
+
+        case 'c':
+          return(
+            <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+            <div ref={node}>
+                <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+                <Menu open={open} setOpen={setOpen} id={menuId} />
+            </div>
+            <div>
+            <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+            </div>
+
+            <button
+              style={{ backgroundColor:'#FFFF8C', fontSize: '24px', padding: '35px', margin: '10px'  }}>
+              Pleasant 
+              Agitated
+            </button>
+            <div style={{ marginTop: '20rem', textAlign: 'center' }}>
+                <button onClick={goBack}>Back</button>	
+                <button onClick={goNext}>Next</button>
+            </div>
+        </>
+        </ThemeProvider>
+          );
+
+        case 'd':
+          return(
+            <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+            <div ref={node}>
+                <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+                <Menu open={open} setOpen={setOpen} id={menuId} />
+            </div>
+            <div>
+            <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+            </div>
+
+            <button
+              style={{ backgroundColor:'#FF6E6E', fontSize: '24px', padding: '35px', margin: '10px'  }}>
+              Pleasant 
+              Agitated
+            </button>
+            <div style={{ marginTop: '20rem', textAlign: 'center' }}>
+                <button onClick={goBack}>Back</button>	
+                <button onClick={goNext}>Next</button>
+            </div>
+        </>
+        </ThemeProvider>
+          );
+    }
    
 }
 

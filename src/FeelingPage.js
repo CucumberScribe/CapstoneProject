@@ -10,10 +10,6 @@ import {useNavigate, Link} from 'react-router-dom';
 
 import  Logo  from './paths-program-llc-logo.jpg';
 
-import picture1 from './picture1forfeelings.jpg';
-import picture2 from './picture2forfeelings.jpg';
-import picture3 from './picture3forfeelings.jpg';
-import picture4 from './picture4forfeelings.jpg';
 
 import './FeelingPage.css';
 
@@ -29,14 +25,17 @@ function FeelingPage() {
 		  navigate('/questions');
 	  }
     
-    const [selectedPicture, setSelectedPicture] = useState(null);
-    const handlePictureClick = (picture) => {
-        setSelectedPicture(picture);
-        navigate("/bodys");
+    const [selected, setSelected] = useState(null);
+    const handleButtonClick = (option) => {
+      if (selected === option) {
+        setSelected(null); // deselect the option if it's already selected
+      } else {
+        setSelected(option); // select the new option
+      }
     };
 
     const goNext = () =>{
-      navigate('/bodys');
+      navigate(`/bodys?q1=${selected}`);
     }
     
     return (
@@ -54,26 +53,36 @@ function FeelingPage() {
             <label>Which of these options would you say best describes yourself?</label>
 
             <div className="row">
-                <img 
-                src={picture1} 
-                alt="Picture 1"  
-                onClick={() => handlePictureClick('picture1')}
-                />
-                <img 
-                src={picture2} 
-                alt="Picture 2" 
-                onClick={() => handlePictureClick('picture2')}
-                />
+            <button
+              style={{ backgroundColor: selected === 'a' ? '#6565FF' : '#C8C8FF', fontSize: '24px', padding: '50px', margin: '8px' }}
+              onClick={() => handleButtonClick('a')}
+            >
+              Pleasant 
+              Calm
+            </button>
+            <button
+              style={{ backgroundColor: selected === 'b' ? '#FCB165' : '#FFE4C8', fontSize: '24px', padding: '50px', margin: '8px'  }}
+              onClick={() => handleButtonClick('b')}
+            >
+              Pleasant 
+              Agitated
+            </button>
             </div>
             <div className="row">
-                <img 
-                src={picture3}
-                alt="Picture 3"  
-                onClick={() => handlePictureClick('picture3')}/>
-                <img 
-                src={picture4} 
-                alt="Picture 4" 
-                onClick={() => handlePictureClick('picture4')}/>
+            <button
+              style={{ backgroundColor: selected === 'c' ? '#FFFF8C' : '#FFFFC8', fontSize: '24px', padding: '35px', margin: '10px'  }}
+              onClick={() => handleButtonClick('c')}
+            >
+              Unpleasant 
+              Calm
+            </button>
+            <button
+              style={{ backgroundColor: selected === 'd' ? '#FF6E6E' : '#FFBEBE', fontSize: '24px', padding: '35px', margin: '10px'  }}
+              onClick={() => handleButtonClick('d')}
+            >
+              UnPleasant 
+              Agitated
+            </button>
             </div>
 
 
