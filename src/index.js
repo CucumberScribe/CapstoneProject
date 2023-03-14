@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Questions from './QuestionPage';
 import Feelings from './FeelingPage';
-import Bodys from './BodyPage';
+import Results from './ResultsPage';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ root.render(
         <Route path="*" element={ <App /> }></Route>
         <Route path="/questions" element={ <Questions /> }></Route>
         <Route path="/feelings" element={ <Feelings /> }></Route>
-        <Route path="/bodys" element={ <Bodys/> }></Route>
+        <Route path="/results" element={ <Results/> }></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

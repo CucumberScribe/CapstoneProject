@@ -6,7 +6,7 @@ import { theme } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { Burger, Menu } from './components';
 
-import {useNavigate, Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 import  Logo  from './paths-program-llc-logo.jpg';
 
@@ -35,7 +35,7 @@ function FeelingPage() {
     };
 
     const goNext = () =>{
-      navigate(`/bodys?q1=${selected}`);
+      navigate(`/results?q1=${selected}`);
     }
     
     return (

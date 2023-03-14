@@ -12,7 +12,7 @@ import  Logo  from './paths-program-llc-logo.jpg';
 
 import { useLocation } from 'react-router-dom';
 
-function BodyPage() {
+function ResultsPage() {
     const [open, setOpen] = useState(false);
     const node = useRef();
     const menuId = "main-menu";
@@ -141,4 +141,4 @@ function BodyPage() {
    
 }
 
-export default BodyPage;
+export default ResultsPage;
