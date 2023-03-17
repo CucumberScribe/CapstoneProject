@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import { Burger, Menu } from './components';
 import Questions from './QuestionPage';
 import Feelings from './FeelingPage';
+import Bodys from './BodyPage';
 import Results from './ResultsPage';
 
 import {Route, Link, Routes, useNavigate} from 'react-router-dom';
@@ -25,6 +26,7 @@ function App() {
 				<Route path="*" element={ <LoginPage/> } />
         <Route path="/questions" element={ <Questions/> } />
         <Route path="/feelings" element={ <Feelings/> } />
+        <Route path="/bodys" element={ <Bodys/> } />
         <Route path="/results"  element={ <Results/> } />
 			  </Routes>
 

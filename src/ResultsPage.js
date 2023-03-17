@@ -22,10 +22,11 @@ function ResultsPage() {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const answer1 = searchParams.get('q1');
+    const answer2 = searchParams.get('q2');
 
     const navigate = useNavigate();
 	  const goBack = () => {
-		  navigate('/feelings');
+		  navigate('/bodys');
 	  }
       const goNext = () =>{
         navigate('/wheels');
@@ -33,31 +34,41 @@ function ResultsPage() {
     
     switch(answer1){
         case 'a':
-          return(
-            <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-            <div ref={node}>
-                <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-                <Menu open={open} setOpen={setOpen} id={menuId} />
-            </div>
-            <div>
-            <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
-            </div>
+          switch(answer2){
+              case 'a':
+                return(
+                  <ThemeProvider theme={theme}>
+              <>
+                <GlobalStyles />
+                  <div ref={node}>
+                      <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+                      <Menu open={open} setOpen={setOpen} id={menuId} />
+                  </div>
+                  <div>
+                  <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+                  </div>
+      
+                  <button
+                    style={{ backgroundColor: '#6565FF', fontSize: '24px', padding: '50px', margin: '8px' }}
+                  >
+                    Pleasant 
+                    Calm
+                  </button>
+                  <button
+                    style={{ backgroundColor: '#6565FF', fontSize: '24px', padding: '50px', margin: '8px' }}
+                  >
+                    Pleasant 
+                    Calm
+                  </button>
 
-            <button
-              style={{ backgroundColor: '#6565FF', fontSize: '24px', padding: '50px', margin: '8px' }}
-            >
-              Pleasant 
-              Calm
-            </button>
-            <div style={{ marginTop: '20rem', textAlign: 'center' }}>
-                <button onClick={goBack}>Back</button>	
-                <button onClick={goNext}>Next</button>
-            </div>
-        </>
-        </ThemeProvider>
-          ); 
+                  <div style={{ marginTop: '20rem', textAlign: 'center' }}>
+                      <button onClick={goBack}>Back</button>	
+                      <button onClick={goNext}>Next</button>
+                  </div>
+              </>
+              </ThemeProvider>
+                );  
+          }
         
         
         case 'b':

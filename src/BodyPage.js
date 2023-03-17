@@ -10,19 +10,26 @@ import {useNavigate} from 'react-router-dom';
 
 import  Logo  from './paths-program-llc-logo.jpg';
 
+import sleep from './sleep.jpg';
+
+import { useLocation } from 'react-router-dom';
 
 import './FeelingPage.css';
 
-function FeelingPage() {
+function BodyPage() {
     const [open, setOpen] = useState(false);
     const node = useRef();
     const menuId = "main-menu";
   
     useOnClickOutside(node, () => setOpen(false));
 
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const answer1 = searchParams.get('q1');
+
     const navigate = useNavigate();
 	  const goBack = () => {
-		  navigate('/questions');
+		  navigate('/feelings');
 	  }
     
     const [selected, setSelected] = useState(null);
@@ -35,7 +42,7 @@ function FeelingPage() {
     };
 
     const goNext = () =>{
-      navigate(`/bodys?q1=${selected}`);
+      navigate(`/results?q1=${answer1}&q2=${selected}`);
     }
     
     return (
@@ -50,40 +57,11 @@ function FeelingPage() {
           <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
 
             <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
-            <label>Which of these options would you say best describes yourself?</label>
+            <label>How did you sleep?</label>
+            <img src={sleep} alt="sleep image" />
+            
 
-            <div className="row">
-            <button
-              style={{ backgroundColor: selected === 'a' ? '#6565FF' : '#C8C8FF', fontSize: '24px', padding: '50px', margin: '8px' }}
-              onClick={() => handleButtonClick('a')}
-            >
-              Pleasant 
-              Calm
-            </button>
-            <button
-              style={{ backgroundColor: selected === 'b' ? '#FCB165' : '#FFE4C8', fontSize: '24px', padding: '50px', margin: '8px'  }}
-              onClick={() => handleButtonClick('b')}
-            >
-              Pleasant 
-              Agitated
-            </button>
-            </div>
-            <div className="row">
-            <button
-              style={{ backgroundColor: selected === 'c' ? '#FFFF8C' : '#FFFFC8', fontSize: '24px', padding: '35px', margin: '10px'  }}
-              onClick={() => handleButtonClick('c')}
-            >
-              Unpleasant 
-              Calm
-            </button>
-            <button
-              style={{ backgroundColor: selected === 'd' ? '#FF6E6E' : '#FFBEBE', fontSize: '24px', padding: '35px', margin: '10px'  }}
-              onClick={() => handleButtonClick('d')}
-            >
-              UnPleasant 
-              Agitated
-            </button>
-            </div>
+
 
 
             <div style={{ marginTop: '20rem', textAlign: 'center' }}>
@@ -97,4 +75,4 @@ function FeelingPage() {
     );
   }
 
-export default FeelingPage;
+export default BodyPage;
