@@ -53,6 +53,12 @@ function QuestionPage() {
       navigate('/feelings', {answers});
     }
 
+    const imgStyles = {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    };
+
     return (
       <ThemeProvider theme={theme}>
       <>
@@ -62,7 +68,7 @@ function QuestionPage() {
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
           <div>
-          <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+          <img style={imgStyles} src={Logo} alt="Paths program Image" />
           </div>
       </>
 

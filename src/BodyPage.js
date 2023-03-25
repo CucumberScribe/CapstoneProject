@@ -85,6 +85,13 @@ function BodyPage() {
     const goNext = () =>{
       navigate(`/results?q1=${answer1}&q2=${selected1}&q3=${selected2}&q4=${selected3}&q5=${selected4}&q6=${selected5}`);
     }
+
+    const imgStyles = {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    };
+    
     
     return (
       <ThemeProvider theme={theme}>
@@ -95,7 +102,7 @@ function BodyPage() {
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
           <div>
-          <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+          <img style={imgStyles} src={Logo} alt="Paths program Image" />
 
             <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
             <label>How did you sleep?</label>
@@ -107,7 +114,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'a'}
-                checked={selected1 === 'a'}
+                defaultChecked={selected1 === 'a'}
                 onClick={() => handleButtonClick1('a')}
                 style={{ marginRight: '80px' }}
                 />
@@ -118,7 +125,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'b'}
-                checked={selected1 === 'b'}
+                defaultChecked={selected1 === 'b'}
                 onClick={() => handleButtonClick1('b')}
                 style={{ marginRight: '80px' }}
                 />
@@ -129,7 +136,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'c'}
-                checked={selected1 === 'c'}
+                defaultChecked={selected1 === 'c'}
                 onClick={() => handleButtonClick1('c')}
                 style={{ marginRight: '80px' }}
                 />
@@ -140,7 +147,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'d'}
-                checked={selected1 === 'd'}
+                defaultChecked={selected1 === 'd'}
                 onClick={() => handleButtonClick1('d')}
                 style={{ marginRight: '80px' }}
                 />
@@ -151,7 +158,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'e'}
-                checked={selected1 === 'e'}
+                defaultChecked={selected1 === 'e'}
                 onClick={() => handleButtonClick1('e')}
                 />
                 </label>
@@ -167,7 +174,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'a'}
-                checked={selected2 === 'a'}
+                defaultChecked={selected2 === 'a'}
                 onClick={() => handleButtonClick2('a')}
                 style={{ marginRight: '80px' }}
                 />
@@ -178,7 +185,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'b'}
-                checked={selected2 === 'b'}
+                defaultChecked={selected2 === 'b'}
                 onClick={() => handleButtonClick2('b')}
                 style={{ marginRight: '80px' }}
                 />
@@ -189,7 +196,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'c'}
-                checked={selected2 === 'c'}
+                defaultChecked={selected2 === 'c'}
                 onClick={() => handleButtonClick2('c')}
                 style={{ marginRight: '80px' }}
                 />
@@ -200,7 +207,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'d'}
-                checked={selected2 === 'd'}
+                defaultChecked={selected2 === 'd'}
                 onClick={() => handleButtonClick2('d')}
                 style={{ marginRight: '80px' }}
                 />
@@ -211,7 +218,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'e'}
-                checked={selected2 === 'e'}
+                defaultChecked={selected2 === 'e'}
                 onClick={() => handleButtonClick2('e')}
                 />
                 </label>
@@ -228,7 +235,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'a'}
-                checked={selected3 === 'a'}
+                defaultChecked={selected3 === 'a'}
                 onClick={() => handleButtonClick3('a')}
                 style={{ marginRight: '80px' }}
                 />
@@ -239,7 +246,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'b'}
-                checked={selected3 === 'b'}
+                defaultChecked={selected3 === 'b'}
                 onClick={() => handleButtonClick3('b')}
                 style={{ marginRight: '80px' }}
                 />
@@ -250,7 +257,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'c'}
-                checked={selected3 === 'c'}
+                defaultChecked={selected3 === 'c'}
                 onClick={() => handleButtonClick3('c')}
                 style={{ marginRight: '80px' }}
                 />
@@ -261,7 +268,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'d'}
-                checked={selected3 === 'd'}
+                defaultChecked={selected3 === 'd'}
                 onClick={() => handleButtonClick3('d')}
                 style={{ marginRight: '80px' }}
                 />
@@ -272,7 +279,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'e'}
-                checked={selected3 === 'e'}
+                defaultChecked={selected3 === 'e'}
                 onClick={() => handleButtonClick3('e')}
                 />
                 </label>
@@ -288,7 +295,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'a'}
-                checked={selected4 === 'a'}
+                defaultChecked={selected4 === 'a'}
                 onClick={() => handleButtonClick4('a')}
                 style={{ marginRight: '80px' }}
                 />
@@ -299,7 +306,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'b'}
-                checked={selected4 === 'b'}
+                defaultChecked={selected4 === 'b'}
                 onClick={() => handleButtonClick4('b')}
                 style={{ marginRight: '80px' }}
                 />
@@ -310,7 +317,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'c'}
-                checked={selected4 === 'c'}
+                defaultChecked={selected4 === 'c'}
                 onClick={() => handleButtonClick4('c')}
                 style={{ marginRight: '80px' }}
                 />
@@ -321,7 +328,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'d'}
-                checked={selected4 === 'd'}
+                defaultChecked={selected4 === 'd'}
                 onClick={() => handleButtonClick4('d')}
                 style={{ marginRight: '80px' }}
                 />
@@ -332,7 +339,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'e'}
-                checked={selected4 === 'e'}
+                defaultChecked={selected4 === 'e'}
                 onClick={() => handleButtonClick4('e')}
                 />
                 </label>
@@ -348,7 +355,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'a'}
-                checked={selected5 === 'a'}
+                defaultChecked={selected5 === 'a'}
                 onClick={() => handleButtonClick5('a')}
                 style={{ marginRight: '80px' }}
                 />
@@ -359,7 +366,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'b'}
-                checked={selected5 === 'b'}
+                defaultChecked={selected5 === 'b'}
                 onClick={() => handleButtonClick5('b')}
                 style={{ marginRight: '80px' }}
                 />
@@ -370,7 +377,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'c'}
-                checked={selected5 === 'c'}
+                defaultChecked={selected5 === 'c'}
                 onClick={() => handleButtonClick5('c')}
                 style={{ marginRight: '80px' }}
                 />
@@ -381,7 +388,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'d'}
-                checked={selected5 === 'd'}
+                defaultChecked={selected5 === 'd'}
                 onClick={() => handleButtonClick5('d')}
                 style={{ marginRight: '80px' }}
                 />
@@ -392,7 +399,7 @@ function BodyPage() {
                 type="radio"
                 name="color"
                 value={'e'}
-                checked={selected5 === 'e'}
+                defaultChecked={selected5 === 'e'}
                 onClick={() => handleButtonClick5('e')}
                 />
                 </label>

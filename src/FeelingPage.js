@@ -37,17 +37,23 @@ function FeelingPage() {
     const goNext = () =>{
       navigate(`/bodys?q1=${selected}`);
     }
+
+    const imgStyles = {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    };
     
     return (
       <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
           <div ref={node}>
-              <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-              <Menu open={open} setOpen={setOpen} id={menuId} />
+              <Burger open={open} setOpen={setOpen} aria-controls={menuId}/>
+              <Menu open={open} setOpen={setOpen} id={menuId}/>
           </div>
           <div>
-          <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+          <img style={imgStyles} src={Logo} alt="Paths program Image" />
 
             <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
             <label>Which of these options would you say best describes yourself?</label>

@@ -33,10 +33,16 @@ function ResultsPage() {
 	  const goBack = () => {
 		  navigate('/bodys');
 	  }
-      const goNext = () =>{
+    const goNext = () =>{
         navigate('/wheels');
-      }
+    }
     
+    const imgStyles = {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    };
+
     switch(answer1){
         case 'a':
           switch(answer2){
@@ -58,7 +64,7 @@ function ResultsPage() {
                                             <Menu open={open} setOpen={setOpen} id={menuId} />
                                         </div>
                                         <div>
-                                        <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+                                        <img style={imgStyles} src={Logo} alt="Paths program Image" />
                                         </div>
                             
                                         <button

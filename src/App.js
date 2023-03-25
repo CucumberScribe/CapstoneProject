@@ -10,7 +10,7 @@ import Feelings from './FeelingPage';
 import Bodys from './BodyPage';
 import Results from './ResultsPage';
 
-import {Route, Link, Routes, useNavigate} from 'react-router-dom';
+import {Route,Routes, useNavigate} from 'react-router-dom';
 
 
 
@@ -55,6 +55,13 @@ function App() {
         alert("Invalid username or password. Please try again.");
       }
     }
+    const imgStyles = {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    };
+
+
       return (
         <ThemeProvider theme={theme}>
           <>
@@ -64,7 +71,7 @@ function App() {
                   <Menu open={open} setOpen={setOpen} id={menuId} />
               </div>
               <div>
-              <img style={{ width: 650, height: 250 }} src={Logo} alt="Paths program Image" />
+              <img style={imgStyles} src={Logo} alt="Paths program Image" />
               </div>
           </>
           
