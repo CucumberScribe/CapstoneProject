@@ -17,6 +17,7 @@ function FeelingPage() {
     const [open, setOpen] = useState(false);
     const node = useRef();
     const menuId = "main-menu";
+    const myLink = "https://pathsprogram.com/";
   
     useOnClickOutside(node, () => setOpen(false));
 
@@ -53,7 +54,9 @@ function FeelingPage() {
               <Menu open={open} setOpen={setOpen} id={menuId}/>
           </div>
           <div>
-          <img style={imgStyles} src={Logo} alt="Paths program Image" />
+          <a href={myLink}>
+          <img style={imgStyles} src={Logo} alt="Paths program" />
+          </a>
 
             <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
             <label>Which of these options would you say best describes yourself?</label>

@@ -45,6 +45,8 @@ function App() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
+    const myLink = "https://pathsprogram.com/";
     
     function handleSubmit(event) {
       event.preventDefault();
@@ -71,7 +73,9 @@ function App() {
                   <Menu open={open} setOpen={setOpen} id={menuId} />
               </div>
               <div>
+              <a href={myLink}>
               <img style={imgStyles} src={Logo} alt="Paths program Image" />
+              </a>
               </div>
           </>
           

@@ -16,6 +16,7 @@ function QuestionPage() {
     const [open, setOpen] = useState(false);
     const node = useRef();
     const menuId = "main-menu";
+    const myLink = "https://pathsprogram.com/";
   
     useOnClickOutside(node, () => setOpen(false));
 
@@ -68,7 +69,9 @@ function QuestionPage() {
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
           <div>
-          <img style={imgStyles} src={Logo} alt="Paths program Image" />
+          <a href={myLink}>
+          <img style={imgStyles} src={Logo} alt="Paths program" />
+          </a>
           </div>
       </>
 
