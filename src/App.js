@@ -9,6 +9,9 @@ import Questions from './QuestionPage';
 import Feelings from './FeelingPage';
 import Bodys from './BodyPage';
 import Results from './ResultsPage';
+import Wheels from './WheelsPage';
+import Mads from './MadPage';
+import MadsResults from './MadResultPage';
 
 import {Route,Routes, useNavigate} from 'react-router-dom';
 
@@ -28,6 +31,9 @@ function App() {
         <Route path="/feelings" element={ <Feelings/> } />
         <Route path="/bodys" element={ <Bodys/> } />
         <Route path="/results"  element={ <Results/> } />
+        <Route path="/wheels"  element={ <Wheels/> } />
+        <Route path="/mad"  element={ <Mads/> } />
+        <Route path="/madresult"  element={ <MadsResults/> } />
 			  </Routes>
 
 
@@ -74,7 +80,7 @@ function App() {
               </div>
               <div>
               <a href={myLink}>
-              <img style={imgStyles} src={Logo} alt="Paths program Image" />
+              <img style={imgStyles} src={Logo} alt="Paths program" />
               </a>
               </div>
           </>

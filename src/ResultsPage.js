@@ -35,7 +35,7 @@ function ResultsPage() {
 		  navigate('/bodys');
 	  }
     const goNext = () =>{
-        navigate('/wheels');
+        navigate(`/wheels?q1=${answer1}&q2=${answer2}&q3=${answer3}&q4=${answer4}&q5=${answer5}&q6=${answer6}`);
     }
     
     const imgStyles = {

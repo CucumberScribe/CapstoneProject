@@ -109,7 +109,7 @@ function BodyPage() {
 
             <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
             <label>How did you sleep?</label>
-            <img src={sleep} alt="sleep image" />
+            <img src={sleep} alt="sleep" />
             <div>
               <form style={{ display: 'flex', alignItems: 'center'}}>
                 <label>
@@ -169,7 +169,7 @@ function BodyPage() {
             </div>
 
             <label>What does exercise look like for you?</label>
-            <img src={exercise} alt="exercise image" />
+            <img src={exercise} alt="exercise" />
             <div>
               <form style={{ display: 'flex', alignItems: 'center'}}>
                 <label>
@@ -230,7 +230,7 @@ function BodyPage() {
 
 
             <label>How health have you been eating?</label>
-            <img src={health} alt="health image" />
+            <img src={health} alt="health" />
             <div>
               <form style={{ display: 'flex', alignItems: 'center'}}>
                 <label>
@@ -290,7 +290,7 @@ function BodyPage() {
             </div>
 
             <label>How much water have you been drinking?</label>
-            <img src={water} alt="water image" />
+            <img src={water} alt="water" />
             <div>
               <form style={{ display: 'flex', alignItems: 'center'}}>
                 <label>
@@ -350,7 +350,7 @@ function BodyPage() {
             </div>
 
             <label>In general, how stress are you feeling?</label>
-            <img src={stress} alt="stress image" />
+            <img src={stress} alt="stress" />
             <div>
               <form style={{ display: 'flex', alignItems: 'center'}}>
                 <label>
@@ -412,7 +412,7 @@ function BodyPage() {
 
             
 
-            <div style={{ marginTop: '20rem', textAlign: 'center' }}>
+            <div style={{ marginTop: '5rem', textAlign: 'center' }}>
                 <button onClick={goBack}>Back</button>	
                 <button onClick={goNext}>Next</button>
             </div>
