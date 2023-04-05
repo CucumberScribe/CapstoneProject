@@ -33,7 +33,7 @@ function MadResultPage() {
 
     const navigate = useNavigate();
 	  const goBack = () => {
-		  navigate(`/mad?q1=${answer1}&q2=${answer2}&q3=${answer3}&q4=${answer4}&q5=${answer5}&q6=${answer6}&w1=${mad1}&w2=${mad2}`);
+		  navigate('/feelings');
 	  }
     const goNext = () =>{
         navigate(`/final?q1=${answer1}&q2=${answer2}&q3=${answer3}&q4=${answer4}&q5=${answer5}&q6=${answer6}&w1=${mad1}&w2=${mad2}`);
@@ -44,7 +44,7 @@ function MadResultPage() {
         height: '100%',
         objectFit: 'contain'
       };
-    
+
     if(mad1 === 'a' && mad2 === 'a'){
         return (
             <ThemeProvider theme={theme}>
@@ -72,13 +72,14 @@ function MadResultPage() {
                     >
                     Hurt
                     </button>
+                        
                     </div>
-    
+                    
                 </div>       
-      
-                  <div style={{ marginTop: '50rem', textAlign: 'center' }}>
-                      <button onClick={goBack}>Back</button>	
-                      <button onClick={goNext}>Next</button>
+                
+                  <div style={{ marginTop: '40rem', textAlign: 'center' }}>
+                    <button onClick={goNext} style={{backgroundColor: '#20CE00',padding: '30px', margin: '8px',width:'150px'}}>Submit</button>
+                    <button onClick={goBack} style={{backgroundColor: '#FF6E6E',padding: '30px', margin: '8px',width:'150px'}}>Start Again</button>	
                   </div>	
             </>
             </ThemeProvider>
@@ -116,14 +117,16 @@ function MadResultPage() {
     
                 </div>       
       
-                  <div style={{ marginTop: '50rem', textAlign: 'center' }}>
-                      <button onClick={goBack}>Back</button>	
-                      <button onClick={goNext}>Next</button>
+                <div style={{ marginTop: '40rem', textAlign: 'center' }}>
+                    <button onClick={goNext} style={{backgroundColor: '#20CE00',padding: '30px', margin: '8px',width:'150px'}}>Submit</button>
+                    <button onClick={goBack} style={{backgroundColor: '#FF6E6E',padding: '30px', margin: '8px',width:'150px'}}>Start Again</button>	
                   </div>	
             </>
             </ThemeProvider>
           );
     }
+
+    
 
     
     

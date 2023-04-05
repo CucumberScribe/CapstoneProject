@@ -116,9 +116,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'a'}
-                defaultChecked={selected1 === 'a'}
-                onClick={() => handleButtonClick1('a')}
+                value={'1'}
+                defaultChecked={selected1 === '1'}
+                onClick={() => handleButtonClick1('1')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -127,9 +127,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'b'}
-                defaultChecked={selected1 === 'b'}
-                onClick={() => handleButtonClick1('b')}
+                value={'2'}
+                defaultChecked={selected1 === '2'}
+                onClick={() => handleButtonClick1('2')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -138,9 +138,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'c'}
-                defaultChecked={selected1 === 'c'}
-                onClick={() => handleButtonClick1('c')}
+                value={'3'}
+                defaultChecked={selected1 === '3'}
+                onClick={() => handleButtonClick1('3')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -149,9 +149,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'d'}
-                defaultChecked={selected1 === 'd'}
-                onClick={() => handleButtonClick1('d')}
+                value={'4'}
+                defaultChecked={selected1 === '4'}
+                onClick={() => handleButtonClick1('4')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -160,9 +160,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'e'}
-                defaultChecked={selected1 === 'e'}
-                onClick={() => handleButtonClick1('e')}
+                value={'5'}
+                defaultChecked={selected1 === '5'}
+                onClick={() => handleButtonClick1('5')}
                 />
                 </label>
               </form>
@@ -176,9 +176,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'a'}
-                defaultChecked={selected2 === 'a'}
-                onClick={() => handleButtonClick2('a')}
+                value={'1'}
+                defaultChecked={selected2 === '1'}
+                onClick={() => handleButtonClick2('1')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -187,9 +187,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'b'}
-                defaultChecked={selected2 === 'b'}
-                onClick={() => handleButtonClick2('b')}
+                value={'2'}
+                defaultChecked={selected2 === '2'}
+                onClick={() => handleButtonClick2('2')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -198,9 +198,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'c'}
-                defaultChecked={selected2 === 'c'}
-                onClick={() => handleButtonClick2('c')}
+                value={'3'}
+                defaultChecked={selected2 === '3'}
+                onClick={() => handleButtonClick2('3')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -209,9 +209,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'d'}
-                defaultChecked={selected2 === 'd'}
-                onClick={() => handleButtonClick2('d')}
+                value={'4'}
+                defaultChecked={selected2 === '4'}
+                onClick={() => handleButtonClick2('4')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -220,9 +220,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'e'}
-                defaultChecked={selected2 === 'e'}
-                onClick={() => handleButtonClick2('e')}
+                value={'5'}
+                defaultChecked={selected2 === '5'}
+                onClick={() => handleButtonClick2('5')}
                 />
                 </label>
               </form>
@@ -237,9 +237,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'a'}
-                defaultChecked={selected3 === 'a'}
-                onClick={() => handleButtonClick3('a')}
+                value={'1'}
+                defaultChecked={selected3 === '1'}
+                onClick={() => handleButtonClick3('1')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -248,9 +248,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'b'}
-                defaultChecked={selected3 === 'b'}
-                onClick={() => handleButtonClick3('b')}
+                value={'2'}
+                defaultChecked={selected3 === '2'}
+                onClick={() => handleButtonClick3('2')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -259,9 +259,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'c'}
-                defaultChecked={selected3 === 'c'}
-                onClick={() => handleButtonClick3('c')}
+                value={'3'}
+                defaultChecked={selected3 === '3'}
+                onClick={() => handleButtonClick3('3')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -270,9 +270,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'d'}
-                defaultChecked={selected3 === 'd'}
-                onClick={() => handleButtonClick3('d')}
+                value={'4'}
+                defaultChecked={selected3 === '4'}
+                onClick={() => handleButtonClick3('4')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -281,9 +281,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'e'}
-                defaultChecked={selected3 === 'e'}
-                onClick={() => handleButtonClick3('e')}
+                value={'5'}
+                defaultChecked={selected3 === '5'}
+                onClick={() => handleButtonClick3('5')}
                 />
                 </label>
               </form>
@@ -297,9 +297,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'a'}
-                defaultChecked={selected4 === 'a'}
-                onClick={() => handleButtonClick4('a')}
+                value={'1'}
+                defaultChecked={selected4 === '1'}
+                onClick={() => handleButtonClick4('1')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -308,9 +308,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'b'}
-                defaultChecked={selected4 === 'b'}
-                onClick={() => handleButtonClick4('b')}
+                value={'2'}
+                defaultChecked={selected4 === '2'}
+                onClick={() => handleButtonClick4('2')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -319,9 +319,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'c'}
-                defaultChecked={selected4 === 'c'}
-                onClick={() => handleButtonClick4('c')}
+                value={'3'}
+                defaultChecked={selected4 === '3'}
+                onClick={() => handleButtonClick4('3')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -330,9 +330,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'d'}
-                defaultChecked={selected4 === 'd'}
-                onClick={() => handleButtonClick4('d')}
+                value={'4'}
+                defaultChecked={selected4 === '4'}
+                onClick={() => handleButtonClick4('4')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -341,9 +341,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'e'}
-                defaultChecked={selected4 === 'e'}
-                onClick={() => handleButtonClick4('e')}
+                value={'5'}
+                defaultChecked={selected4 === '5'}
+                onClick={() => handleButtonClick4('5')}
                 />
                 </label>
               </form>
@@ -357,9 +357,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'a'}
-                defaultChecked={selected5 === 'a'}
-                onClick={() => handleButtonClick5('a')}
+                value={'1'}
+                defaultChecked={selected5 === '1'}
+                onClick={() => handleButtonClick5('1')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -368,9 +368,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'b'}
-                defaultChecked={selected5 === 'b'}
-                onClick={() => handleButtonClick5('b')}
+                value={'2'}
+                defaultChecked={selected5 === '2'}
+                onClick={() => handleButtonClick5('2')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -379,9 +379,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'c'}
-                defaultChecked={selected5 === 'c'}
-                onClick={() => handleButtonClick5('c')}
+                value={'3'}
+                defaultChecked={selected5 === '3'}
+                onClick={() => handleButtonClick5('3')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -390,9 +390,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'d'}
-                defaultChecked={selected5 === 'd'}
-                onClick={() => handleButtonClick5('d')}
+                value={'4'}
+                defaultChecked={selected5 === '4'}
+                onClick={() => handleButtonClick5('4')}
                 style={{ marginRight: '80px' }}
                 />
                 </label>
@@ -401,9 +401,9 @@ function BodyPage() {
                 <input
                 type="radio"
                 name="color"
-                value={'e'}
-                defaultChecked={selected5 === 'e'}
-                onClick={() => handleButtonClick5('e')}
+                value={'5'}
+                defaultChecked={selected5 === '5'}
+                onClick={() => handleButtonClick5('5')}
                 />
                 </label>
               </form>
