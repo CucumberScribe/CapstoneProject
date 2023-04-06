@@ -9,6 +9,8 @@ import Results from './ResultsPage';
 import Wheels from './WheelsPage';
 import Mads from './MadPage';
 import MadsResults from './MadResultPage';
+import Finals from './HappyPage';
+import Changes from './ChangePage';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
@@ -26,6 +28,8 @@ root.render(
         <Route path="/wheels"  element={ <Wheels/> } />
         <Route path="/mad"  element={ <Mads/> } />
         <Route path="/madresult"  element={ <MadsResults/> } />
+        <Route path="/final"  element={ <Finals/> } />
+        <Route path="/changes"  element={ <Changes/> } />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

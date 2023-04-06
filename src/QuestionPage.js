@@ -33,12 +33,12 @@ function QuestionPage() {
         answer10: ""
       });
 
-    useEffect(() => {
+    /*useEffect(() => {
     const storedAnswers = JSON.parse(localStorage.getItem("answers"));
         if (storedAnswers) {
             setAnswers(storedAnswers);
         }
-    }, []);
+    }, []);*/
 
     const handleAnswerChange = (event) => {
         setAnswers({ ...answers, [event.target.name]: event.target.value });
