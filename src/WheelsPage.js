@@ -8,7 +8,7 @@ import { Burger, Menu } from './components';
 
 import {useNavigate} from 'react-router-dom';
 
-import  Logo  from './paths-program-llc-logo.jpg';
+import  Logo  from './assets/Emozi.png';
 
 import { useLocation } from 'react-router-dom';
 
@@ -62,42 +62,56 @@ function WheelsPage(){
                 <Menu open={open} setOpen={setOpen} id={menuId}/>
             </div>
             <div>
-            <a href={myLink}>
-            <img style={imgStyles} src={Logo} alt="Paths program" />
-            </a>
+            
+            <header>
+              <img style={imgStyles} src={Logo} alt="Paths program" />
+            </header>
   
-                <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
-                <label>How are you feeling?</label>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', color: 'black',fontSize: '20px'}}>
+                  <div style={{margin: '1rem'}}>
+                <label><h3>How are you feeling?</h3></label>
+                </div>
+                <div>
                 <button
                 style={{ backgroundColor: selected === 'a' ? '#8B0000' : '#FF0000', fontSize: '24px', padding: '70px', margin: '8px',width:'450px' }}
                 onClick={() => handleButtonClick('a')}
                 >
                 MAD
                 </button>
+                </div>
+                <div>
                 <button
                 style={{ backgroundColor: selected === 'b' ? '#ff8c00' : '#ffa500', fontSize: '22px', padding: '50px', margin: '8px',width:'450px'   }}
                 onClick={() => handleButtonClick('b')}
                 >
                 SCARED 
                 </button>
+                </div>
+                <div>
                 <button
                 style={{ backgroundColor: selected === 'c' ? '#ffd700' : '#FFFF00', fontSize: '24px', padding: '35px', margin: '10px',width:'450px'   }}
                 onClick={() => handleButtonClick('c')}
                 >
                 JOYFUL 
                 </button>
+                </div>
+                <div>
                 <button
                 style={{ backgroundColor: selected === 'd' ? '#7cfc00' : '#00FF00', fontSize: '24px', padding: '35px', margin: '10px',width:'450px'   }}
                 onClick={() => handleButtonClick('d')}
                 >
                 POWERFUL
                 </button>
+                </div>
+                <div>
                 <button
                 style={{ backgroundColor: selected === 'e' ? '#0000cd' : '#0000FF', fontSize: '24px', padding: '35px', margin: '10px',width:'450px'   }}
                 onClick={() => handleButtonClick('e')}
                 >
                 PEACEFUL
                 </button>
+                </div>
+                <div>
                 <button
                 style={{ backgroundColor: selected === 'f' ? '#c71585' : '#800080', fontSize: '24px', padding: '35px', margin: '10px',width:'450px'   }}
                 onClick={() => handleButtonClick('f')}
@@ -105,13 +119,18 @@ function WheelsPage(){
                 SAD
                 </button>
                 </div>
+                </div>
 
             </div>       
   
-              <div style={{ marginTop: '50rem', textAlign: 'center' }}>
+              <div style={{ marginTop: '3rem', textAlign: 'center' }}>
                   <button onClick={goBack}>Back</button>	
                   <button onClick={goNext}>Next</button>
-              </div>	
+              </div>
+
+              <footer>
+                <p>&reg;2023 LearningSEL, LLC | &copy;2023 Anna-Lisa Mackay, M.Ed. | Published and Distributed by PATHS Program LLC</p>
+              </footer>
         </>
         </ThemeProvider>
       );

@@ -6,9 +6,9 @@ import { ThemeProvider } from 'styled-components';
 import { Burger, Menu } from './components';
 import { Link } from 'react-router-dom';
 
-import  Logo  from './paths-program-llc-logo.jpg';
+import  Logo  from './assets/Emozi.png';
 
-import Bye from './bye.jpg';
+import Bye from './assets/bye.jpg';
 
 import './HappyPage.css';
 
@@ -33,10 +33,11 @@ function FinalPage() {
         <Menu open={open} setOpen={setOpen} id={menuId}/>
         </div>
         <div>
-        <a href={myLink}>
-        <img style={imgStyles} src={Logo} alt="Paths program" />
-        </a>
-
+        
+        <header>
+          <img style={imgStyles} src={Logo} alt="Paths program" />
+        </header>
+      
         <div className="question-page">
         <h2 className="question-heading">Having trouble?</h2>
         <p className="go-to-learning">
@@ -59,6 +60,9 @@ function FinalPage() {
 
         </div>
 
+        <footer>
+          <p>&reg;2023 LearningSEL, LLC | &copy;2023 Anna-Lisa Mackay, M.Ed. | Published and Distributed by PATHS Program LLC</p>
+        </footer>
         
       </>
       </ThemeProvider>

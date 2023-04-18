@@ -8,13 +8,13 @@ import { Burger, Menu } from './components';
 
 import {useNavigate} from 'react-router-dom';
 
-import  Logo  from './paths-program-llc-logo.jpg';
+import  Logo  from './assets/Emozi.png';
 
-import sleep from './sleep.jpg';
-import exercise from './exercise.jpg';
-import health from './health.jpg';
-import water from './water.jpg';
-import stress from './stress.jpg';
+import sleep from './assets/sleep.jpg';
+import exercise from './assets/exercise.jpg';
+import health from './assets/health.jpg';
+import water from './assets/water.jpg';
+import stress from './assets/stress.jpg';
 
 import { useLocation } from 'react-router-dom';
 
@@ -103,11 +103,12 @@ function BodyPage() {
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
           <div>
-          <a href={myLink}>
-          <img style={imgStyles} src={Logo} alt="Paths program"/>
-          </a>
-
-            <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
+          
+          <header>
+            <img style={imgStyles} src={Logo} alt="Paths program"/>
+          </header>
+          
+            <div style={{display: 'grid', alignitems:'center', justifyContent: 'center', height: '100%', color: 'black',fontSize: '20px'}}>
             <label>How did you sleep?</label>
             <img src={sleep} alt="sleep" />
             <div>
@@ -418,6 +419,10 @@ function BodyPage() {
             </div>
             </div>	
         </div>
+
+        <footer>
+          <p>&reg;2023 LearningSEL, LLC | &copy;2023 Anna-Lisa Mackay, M.Ed. | Published and Distributed by PATHS Program LLC</p>
+        </footer>
       </>
       </ThemeProvider>
     );

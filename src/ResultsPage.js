@@ -8,7 +8,7 @@ import { Burger, Menu } from './components';
 
 import {useNavigate} from 'react-router-dom';
 
-import  Logo  from './paths-program-llc-logo.jpg';
+import  Logo  from './assets/Emozi.png';
 
 import { useLocation } from 'react-router-dom';
 
@@ -67,29 +67,33 @@ function ResultsPage() {
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
           <div>
-          <a href={myLink}>
-          <img style={imgStyles} src={Logo} alt="Paths program" />
-          </a>          
+          
+          <header>
+            <img style={imgStyles} src={Logo} alt="Paths program" />
+          </header>
+           
           </div>
+          <div style={{display: 'flex', alignitems:'center', justifyContent: 'center', height: '100%',}}>
           <button
             style={{ backgroundColor: '#6565FF', fontSize: '24px', padding: '50px', margin: '8px' }}
           >
             Pleasant 
             Calm
           </button>
-          <div style={{ display: "flex",marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
+          </div>
+          <div style={{ display: "flex", alignitems:'center', justifyContent: 'center', height: '100%', marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
             <label key="{question1}">Sleeping Rating:{stars1}</label>
           </div>
-          <div style={{ display: "flex",marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
+          <div style={{ display: "flex", alignitems:'center', justifyContent: 'center', height: '100%', marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
             <label key="{question2}">Exercise Rating:{stars2}</label>
           </div>
-          <div style={{ display: "flex",marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
+          <div style={{ display: "flex", alignitems:'center', justifyContent: 'center', height: '100%', marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
             <label key="{question3}">Healthy Eating Rating:{stars3}</label>
           </div>
-          <div style={{ display: "flex",marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
+          <div style={{ display: "flex", alignitems:'center', justifyContent: 'center', height: '100%', marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
             <label key="{question4}">Drinking Water Rating:{stars4}</label>
           </div>
-          <div style={{ display: "flex",marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
+          <div style={{ display: "flex", alignitems:'center', justifyContent: 'center', height: '100%', marginLeft: "20px", flexDirection: "row",fontSize: '20px',color:'black'}}>
             <label key="{question5}">Calmness Rating:{stars5}</label>
           </div>
           <div style={{ marginTop: '5rem', textAlign: 'center' }}>
@@ -196,6 +200,10 @@ function ResultsPage() {
                 <button onClick={goBack}>Back</button>	
                 <button onClick={goNext}>Next</button>
             </div>
+
+            <footer>
+              <p>&reg;2023 LearningSEL, LLC | &copy;2023 Anna-Lisa Mackay, M.Ed. | Published and Distributed by PATHS Program LLC</p>
+            </footer>
             </>
             </ThemeProvider>
         );

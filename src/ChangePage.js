@@ -6,8 +6,8 @@ import { ThemeProvider } from 'styled-components';
 import { Burger, Menu } from './components';
 import { Link } from 'react-router-dom';
 
-import  Logo  from './paths-program-llc-logo.jpg';
-import Scope from './scope.jpg';
+import  Logo  from './assets/Emozi.png';
+import Scope from './assets/scope.jpg';
 
 import './ChangePage.css';
 
@@ -33,12 +33,13 @@ function ChangePage() {
         <Menu open={open} setOpen={setOpen} id={menuId}/>
         </div>
         <div>
-        <a href={myLink}>
-        <img style={imgStyles} src={Logo} alt="Paths program" />
-        </a>
+        
+        <header>
+          <img style={imgStyles} src={Logo} alt="Paths program" />
+        </header>
 
-        <div>
-        <img style={imgStyles} src={Scope} alt="Scope it"/>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img style={{width: '20%', height: 'auto', minWidth: '440px'}} src={Scope} alt="Scope it"/>
         </div>    
 
 
@@ -48,6 +49,10 @@ function ChangePage() {
           </Link>
         </p>
         </div>
+
+        <footer>
+          <p>&reg;2023 LearningSEL, LLC | &copy;2023 Anna-Lisa Mackay, M.Ed. | Published and Distributed by PATHS Program LLC</p>
+        </footer>
       </>
       </ThemeProvider>
     );

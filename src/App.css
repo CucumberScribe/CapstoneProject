@@ -1,3 +1,14 @@
+main, head, body, footer, header, #container {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  background-color: #363636;
+}
+
+main, header {
+	background-color: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +25,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +36,27 @@
 
 .App-link {
   color: #61dafb;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+#submit {
+	margin: 0 auto;
+	display: block;
+	padding: 2% 3%;
+	background-color: #296DAC;
+	color: #F5F5F5;
+	font-size: 1.5em;
+  border-radius: 12px;
 }
 
 @keyframes App-logo-spin {

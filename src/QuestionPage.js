@@ -10,7 +10,7 @@ import {useNavigate} from 'react-router-dom';
 
 
 
-import  Logo  from './paths-program-llc-logo.jpg';
+import  Logo  from './assets/Emozi.png';
 
 function QuestionPage() {
     const [open, setOpen] = useState(false);
@@ -27,10 +27,7 @@ function QuestionPage() {
         answer4: "",
         answer5: "",
         answer6: "",
-        answer7: "",
-        answer8: "",
-        answer9: "",
-        answer10: ""
+        answer7: ""
       });
 
     /*useEffect(() => {
@@ -69,118 +66,111 @@ function QuestionPage() {
               <Menu open={open} setOpen={setOpen} id={menuId} />
           </div>
           <div>
-          <a href={myLink}>
+          
+          <header>
           <img style={imgStyles} src={Logo} alt="Paths program" />
-          </a>
+          </header>
+          
+          
           </div>
       </>
-
-      <div style={{alignitems:'center', width: 200,  height: 100, color: 'black',fontSize: '20px'}}>
+      <div style={{alignitems:'center', color: 'black'}}>
         <form>
-          <label htmlFor="answer1">Where do you reside?</label>
-          <input
+          <fieldset>
+            <legend>Who are you?</legend>
+
+            <label htmlFor="answer1"><h3>First Name:</h3></label>
+            <input
             type="text"
             id="answer1"
             name="answer1"
             value={answers.answer1}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer2">When were your born?</label>
-          <input
+            style={{ width: '350px', height: '50px'}}
+            />
+
+            <label htmlFor="answer2"><h3>Last Name:</h3></label>
+            <input
             type="text"
             id="answer2"
             name="answer2"
             value={answers.answer2}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer3">How old are you?</label>
-          <input
+            style={{ width: '350px', height: '50px'}}
+            />
+
+            <label htmlFor="answer3"><h3>What is your Email?</h3></label>
+            <input
             type="text"
             id="answer3"
             name="answer3"
             value={answers.answer3}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer4">Which school do you go to?</label>
-          <input
+            style={{ width: '350px', height: '50px'}}
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Tell Me About Yourself</legend>
+            
+            <label htmlFor="answer4"><h3>How old are you?</h3></label>
+            <input
             type="text"
             id="answer4"
             name="answer4"
             value={answers.answer4}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer5">What grade are you in?</label>
-          <input
+            style={{ width: '350px', height: '50px'}}
+            />
+
+            <label htmlFor="answer5"><h3>What school do you go to?</h3></label>
+            <input
             type="text"
             id="answer5"
             name="answer5"
             value={answers.answer5}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer6">What is your gender identity?</label>
-          <input
+            style={{ width: '350px', height: '50px'}}
+            />
+
+            <label htmlFor="answer6"><h3>What grade are you in?</h3></label>
+            <input
             type="text"
             id="answer6"
             name="answer6"
             value={answers.answer6}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer7">What ratial or ethnic group do you belong to?</label>
-          <input
+            style={{ width: '350px', height: '50px'}}
+            />
+
+            <label htmlFor="answer7"><h3>What is your gender identity?</h3></label>
+            <input
             type="text"
             id="answer7"
             name="answer7"
             value={answers.answer7}
             onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer8">How many siblings do you have?</label>
-          <input
-            type="text"
-            id="answer8"
-            name="answer8"
-            value={answers.answer8}
-            onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer9">What do you parents do? Mother: </label>
-          <input
-            type="text"
-            id="answer9"
-            name="answer9"
-            value={answers.answer9}
-            onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
-          <br />
-          <label htmlFor="answer10">Father: </label>
-          <input
-            type="text"
-            id="answer10"
-            name="answer10"
-            value={answers.answer10}
-            onChange={handleAnswerChange}
-            style={{ width: '350px', height: '50px',fontSize: '30px'}}
-          />
+            style={{ width: '350px', height: '50px'}}
+            />
+          </fieldset>
         </form>
         	
-        <button onClick={goNext}>Next</button>	
+        <div style={{ alignitems: 'center' }}>
+          <button type="submit" id="submit" style={{ fontSize: '1.5em' }} onClick={goNext}>Submit</button>
+        </div>
+
+        <footer>
+          <p>&reg;2023 LearningSEL, LLC | &copy;2023 Anna-Lisa Mackay, M.Ed. | Published and Distributed by PATHS Program LLC</p>
+        </footer>
+
       </div>
+
+
+      
+
+      
       </ThemeProvider>
+      
     );
   }
   export default QuestionPage;
